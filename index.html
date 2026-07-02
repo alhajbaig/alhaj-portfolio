@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirza Alhaj Baig | AI/ML Engineer & Researcher Portfolio</title>
+    <meta name="description" content="Portfolio of Mirza Alhaj Baig, AI/ML Engineer and Researcher. Exploring LLMs, RAG, NLP, and Deep Learning to solve real-world problems.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;600;800;900&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Background Neural Network Canvas -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Background Grid -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">ALHAJ</span>
+                <span class="logo-dot">.AI</span>
+                <span class="logo-bracket">&gt;</span>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar" id="loader-bar"></div>
+            </div>
+            <div class="loader-status">Initializing Neural Interface... <span id="loader-percent">0</span>%</div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Mirza Alhaj Baig</span>
+                <span class="logo-dot">.AI</span>
+                <span class="logo-bracket">&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link contact-btn-nav">Contact</a>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Open for Internships & AI Collaborations
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="hero-first-name">MIRZA</span>
+                        <span class="hero-last-name">ALHAJ BAIG</span>
+                        <div class="hero-name-line"></div>
+                    </h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter-prefix">I am </span>
+                        <span class="typewriter-text" id="typewriter-target"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate AI/ML Engineer focused on building intelligent systems, solving real-world challenges, and shaping the future of Artificial Intelligence.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="assets/resume.pdf" class="btn btn-primary btn-magnetic" download>
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn-magnetic">
+                            <i class="fa-solid fa-envelope"></i> Contact Me
+                        </a>
+                        <a href="#projects" class="btn btn-outline btn-magnetic">
+                            <i class="fa-solid fa-code"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/alhajbaig" target="_blank" aria-label="GitHub" class="social-icon-btn">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mirza-alhaj-baig-49b250308/" target="_blank" aria-label="LinkedIn" class="social-icon-btn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:alhajbaig2006@gmail.com" aria-label="Email" class="social-icon-btn">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-content">
+                    <div class="profile-container">
+                        <div class="profile-glow-ring ring-1"></div>
+                        <div class="profile-glow-ring ring-2"></div>
+                        <div class="profile-glow-ring ring-3"></div>
+                        <div class="profile-image-frame">
+                            <img src="assets/profile.jpg" alt="Mirza Alhaj Baig" class="profile-img">
+                        </div>
+                        
+                        <!-- Floating AI Icons -->
+                        <div class="floating-icon icon-1" data-title="Neural Networks">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="floating-icon icon-2" data-title="Machine Learning">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="floating-icon icon-3" data-title="Python">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <div class="floating-icon icon-4" data-title="TensorFlow">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <div class="floating-icon icon-5" data-title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="floating-icon icon-6" data-title="AI Hardware">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll Down">
+                <span class="scroll-text">Scroll to Explore</span>
+                <div class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </div>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-reveal">
+            <!-- Background Glows for Depth -->
+            <div class="about-glow-orb orb-1"></div>
+            <div class="about-glow-orb orb-2"></div>
+
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 01. COGNITIVE ARCHITECTURE</span>
+                    <h2 class="section-title">About Alhaj</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="about-dashboard-grid">
+                    <!-- Column 1: Bio & Stats (Left) -->
+                    <div class="about-left-col">
+                        <!-- Biography Card -->
+                        <div class="bio-narrative-card glass-card">
+                            <div class="card-glow"></div>
+                            <div class="quote-intro">
+                                "Engineering cognitive systems that bridge human intent and machine execution."
+                            </div>
+                            <div class="bio-paragraphs">
+                                <p>
+                                    I am a third-year <strong>B.Tech Computer Science &amp; Engineering</strong> student at <strong>GCOEN (Government College of Engineering, Nagpur)</strong>. Driven by a deep curiosity about intelligence systems, I specialized my studies in Machine Learning, Large Language Models, and Natural Language Processing.
+                                </p>
+                                <p>
+                                    My work focuses on constructing robust, intelligent solutions to real-world challenges. Whether architecting Retrieval-Augmented Generation (RAG) pipelines, building deep neural networks, or optimization workflows, I aim to push the boundaries of modern AI engineering.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Stats Dashboard Grid -->
+                        <div class="stats-dashboard-grid">
+                            <div class="stat-card glass-card">
+                                <div class="card-glow"></div>
+                                <div class="counter-num" data-target="2">0</div>
+                                <div class="stat-card-lbl">Hackathons Placed</div>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <div class="card-glow"></div>
+                                <div class="counter-num" data-target="10">0</div>
+                                <div class="stat-card-lbl">Projects Done</div>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <div class="card-glow"></div>
+                                <div class="counter-num" data-target="15">0</div>
+                                <div class="stat-card-lbl">Tech Stacks</div>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <div class="card-glow"></div>
+                                <div class="counter-num" data-target="2">0</div>
+                                <div class="stat-card-lbl">AI Internships</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: IDE & Timeline (Right) -->
+                    <div class="about-right-col">
+                        <!-- Premium Code Editor Terminal -->
+                        <div class="about-terminal-panel glass-card">
+                            <div class="card-glow"></div>
+                            <div class="terminal-hud-header">
+                                <div class="terminal-controls">
+                                    <span class="t-dot red"></span>
+                                    <span class="t-dot yellow"></span>
+                                    <span class="t-dot green"></span>
+                                </div>
+                                <div class="terminal-tab-lbl">alhaj_baig.py</div>
+                                <div class="terminal-connection-indicator">
+                                    <span class="conn-pulse"></span> SYSTEM OK
+                                </div>
+                            </div>
+                            
+                            <div class="terminal-code-viewport">
+                                <pre><code><span class="code-keyword">import</span> intelligence <span class="code-keyword">as</span> ai
+
+<span class="code-comment"># Initializing AI Developer specifications</span>
+engineer = ai.Developer(
+    identity=<span class="code-str">"Alhaj Baig"</span>,
+    specialties=[<span class="code-str">"LLMs"</span>, <span class="code-str">"RAG"</span>, <span class="code-str">"CV"</span>],
+    status=<span class="code-str">"Ready for Internships"</span>
+)
+
+engineer.run_intelligence_pipeline()</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Milestone Timeline Capsules -->
+                        <div class="timeline-capsule-deck">
+                            <h3 class="deck-title">// KEY ACADEMIC MILESTONES</h3>
+                            
+                            <!-- Capsule 1 -->
+                            <div class="timeline-capsule glass-card">
+                                <div class="card-glow"></div>
+                                <div class="capsule-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="capsule-content">
+                                    <div class="capsule-meta">
+                                        <h4>B.Tech in Computer Science</h4>
+                                        <span class="capsule-date">2024 – Present</span>
+                                    </div>
+                                    <div class="capsule-school">Government College of Engineering, Nagpur</div>
+                                    <p>Focusing on computation models, algorithmic logic, and specialized deep learning architectures.</p>
+                                </div>
+                            </div>
+
+                            <!-- Capsule 2 -->
+                            <div class="timeline-capsule glass-card">
+                                <div class="card-glow"></div>
+                                <div class="capsule-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div class="capsule-content">
+                                    <div class="capsule-meta">
+                                        <h4>Runner-up @ 24h Hackathon</h4>
+                                        <span class="capsule-date">2025</span>
+                                    </div>
+                                    <div class="capsule-school">VNIT Nagpur</div>
+                                    <p>Developed an architectural AI prototype under high-pressure competitive team conditions.</p>
+                                </div>
+                            </div>
+
+                            <!-- Capsule 3 -->
+                            <div class="timeline-capsule glass-card">
+                                <div class="card-glow"></div>
+                                <div class="capsule-icon"><i class="fa-solid fa-medal"></i></div>
+                                <div class="capsule-content">
+                                    <div class="capsule-meta">
+                                        <h4>Winner @ College Hackathon</h4>
+                                        <span class="capsule-date">2024</span>
+                                    </div>
+                                    <div class="capsule-school">Tulsiram Gaikwad College</div>
+                                    <p>Won first place by designing a computer vision and localized edge model pipeline solution.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 02. INDUSTRIAL EXPERIENCE</span>
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="experience-console glass-card">
+                    <div class="card-glow"></div>
+                    <div class="console-grid">
+                        <!-- Navigation Tabs -->
+                        <div class="console-sidebar">
+                            <div class="console-tab-item active" data-exp="cognifyz">
+                                <span class="tab-indicator"></span>
+                                <div class="tab-content-info">
+                                    <h4>Cognifyz Technologies</h4>
+                                    <p>Machine Learning Intern</p>
+                                </div>
+                            </div>
+                            <div class="console-tab-item" data-exp="qskill">
+                                <span class="tab-indicator"></span>
+                                <div class="tab-content-info">
+                                    <h4>QSkill</h4>
+                                    <p>AI/ML Engineer Intern</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terminal Panel Viewport -->
+                        <div class="console-body">
+                            <div class="terminal-status-bar">
+                                <div class="status-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="terminal-title" id="terminal-status">// SYSTEM: CONNECTED TO COGNIFYZ.ML</div>
+                            </div>
+                            
+                            <!-- Dynamic Content Viewport -->
+                            <div class="exp-viewport-content" id="exp-viewport">
+                                <div class="exp-meta-header">
+                                    <div class="role-company-wrapper">
+                                        <h3>Machine Learning Intern</h3>
+                                        <a href="#" class="company-link-glow">Cognifyz Technologies <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                    <span class="exp-duration"><i class="fa-regular fa-calendar"></i> Dec 2025 - Present</span>
+                                </div>
+
+                                <div class="exp-details-panel">
+                                    <ul class="exp-bullet-list">
+                                        <li><span class="bullet-glow">[✓]</span> Design and deploy machine learning models using Scikit-Learn and TensorFlow to solve real-world predictive analysis tasks.</li>
+                                        <li><span class="bullet-glow">[⚡]</span> Perform extensive data preprocessing, exploratory data analysis (EDA), feature engineering, and dimensional reduction pipelines.</li>
+                                        <li><span class="bullet-glow">[✓]</span> Optimize model hyperparameters and construct validation frameworks, enhancing accuracy rates and generalizability.</li>
+                                        <li><span class="bullet-glow">[⚡]</span> Collaborate on integrating model outputs with responsive application interfaces, documenting the analytical steps clearly.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="console-footer-stack">
+                                    <span class="stack-label">STACK_USED_BY_SYSTEM:</span>
+                                    <div class="stack-badges">
+                                        <span class="badge-tag">Python</span>
+                                        <span class="badge-tag">Scikit-Learn</span>
+                                        <span class="badge-tag">TensorFlow</span>
+                                        <span class="badge-tag">Jupyter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 03. INTELLECTUAL ARMORY</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <!-- Skills Category Navigation Filters -->
+                <div class="skills-filter-nav">
+                    <button class="filter-btn active" data-filter="all">All Armory</button>
+                    <button class="filter-btn" data-filter="aiml">AI & ML</button>
+                    <button class="filter-btn" data-filter="languages">Languages</button>
+                    <button class="filter-btn" data-filter="data">Data Science</button>
+                    <button class="filter-btn" data-filter="tools">Dev Tools</button>
+                </div>
+
+                <div class="skills-dashboard" id="skills-container">
+                    <!-- Programming -->
+                    <div class="skills-category-card glass-card" data-category="languages">
+                        <div class="card-glow"></div>
+                        <h3 class="category-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML / CSS</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & ML -->
+                    <div class="skills-category-card glass-card" data-category="aiml">
+                        <div class="card-glow"></div>
+                        <h3 class="category-title"><i class="fa-solid fa-brain"></i> AI & Machine Learning</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Scikit-Learn</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TensorFlow / Deep Learning</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">NLP & Large Language Models</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Science -->
+                    <div class="skills-category-card glass-card" data-category="data">
+                        <div class="card-glow"></div>
+                        <h3 class="category-title"><i class="fa-solid fa-chart-line"></i> Data Science</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">NumPy / Pandas</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Matplotlib / Seaborn</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL Databases</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Developer Tools -->
+                    <div class="skills-category-card glass-card" data-category="tools">
+                        <div class="card-glow"></div>
+                        <h3 class="category-title"><i class="fa-solid fa-sliders"></i> Developer Tools</h3>
+                        <div class="skills-grid-badges">
+                            <span class="tech-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                            <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                            <span class="tech-badge"><i class="fa-solid fa-code"></i> VS Code</span>
+                            <span class="tech-badge"><i class="fa-solid fa-book-open"></i> Jupyter</span>
+                            <span class="tech-badge"><i class="fa-solid fa-cloud"></i> Colab</span>
+                        </div>
+                        
+                        <!-- Circular Skill Meter container -->
+                        <div class="circular-meters">
+                            <div class="circle-meter-box">
+                                <svg class="circle-svg" viewBox="0 0 80 80">
+                                    <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                                    <circle class="circle-progress" cx="40" cy="40" r="30" style="stroke-dashoffset: 38; stroke: var(--electric-purple);"></circle>
+                                </svg>
+                                <span class="circle-label">Git Flow</span>
+                            </div>
+                            <div class="circle-meter-box">
+                                <svg class="circle-svg" viewBox="0 0 80 80">
+                                    <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                                    <circle class="circle-progress" cx="40" cy="40" r="30" style="stroke-dashoffset: 56; stroke: var(--neon-blue);"></circle>
+                                </svg>
+                                <span class="circle-label">Containers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 04. RECENT BUILDS</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                     <div class="project-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="project-image-wrapper video-highlight-wrapper highlighted-video-wrapper docusense-theme">
+                            <div class="video-glow-effect"></div>
+                            
+                            <div class="hud-monitor-viewport">
+                                <!-- Sci-Fi Corner Brackets -->
+                                <div class="hud-bracket tl"></div>
+                                <div class="hud-bracket tr"></div>
+                                <div class="hud-bracket bl"></div>
+                                <div class="hud-bracket br"></div>
+                                
+                                <!-- High-Tech Scanline & CRT Grid -->
+                                <div class="hud-matrix-grid"></div>
+                                
+                                <!-- Top Status HUD Bar -->
+                                <div class="hud-top-meta">
+                                    <div class="meta-left">
+                                        <span class="pulse-dot green-pulse"></span> LIVE_FEED // RAG_PREVIEW
+                                    </div>
+                                    <div class="meta-right">SECURE_LINK</div>
+                                </div>
+                                
+                                <video class="project-video-element" autoplay loop muted playsinline preload="auto">
+                                    <source src="assets/docusense.mp4?v=2" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                
+                                <!-- Bottom Cyber Diagnostics Readout -->
+                                <div class="hud-bottom-readout">
+                                    <span>SYS: ACTIVE</span>
+                                    <span>RECALL: 99.4%</span>
+                                    <span>MODEL: LLAMA_3.1</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-overlay" style="pointer-events: none;">
+                                <div class="project-tech-pills">
+                                    <span>Python</span>
+                                    <span>RAG</span>
+                                    <span>Llama 3.1</span>
+                                    <span>Vector DB</span>
+                                    <span>NLP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">DocuSense</h3>
+                            <p class="project-tagline">Document Intelligence Platform powered by Retrieval-Augmented Generation (RAG)</p>
+                            <p class="project-desc">
+                                DocuSense processes uploaded PDF documents by chunking them into a vector database. When users ask questions, the RAG pipeline retrieves only relevant document fragments before sending them to the Llama 3.1 LLM, ensuring accurate, context-aware, and hallucination-resistant responses.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Architectural Features:</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-circle-nodes"></i> Advanced text chunking & vector search embeddings</li>
+                                    <li><i class="fa-solid fa-shield-halved"></i> Hallucination mitigation via context grounding</li>
+                                    <li><i class="fa-solid fa-bolt"></i> High-performance vector database querying</li>
+                                </ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/alhajbaig/DocuSense-RAG-implemented-" target="_blank" class="btn btn-secondary btn-sm btn-magnetic">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="https://docusense-alhaj.streamlit.app/" target="_blank" class="btn btn-primary btn-sm btn-magnetic">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="project-image-wrapper video-highlight-wrapper highlighted-video-wrapper mentor-theme">
+                            <div class="video-glow-effect"></div>
+                            
+                            <div class="hud-monitor-viewport">
+                                <!-- Sci-Fi Corner Brackets -->
+                                <div class="hud-bracket tl"></div>
+                                <div class="hud-bracket tr"></div>
+                                <div class="hud-bracket bl"></div>
+                                <div class="hud-bracket br"></div>
+                                
+                                <!-- High-Tech Scanline & CRT Grid -->
+                                <div class="hud-matrix-grid"></div>
+                                
+                                <!-- Top Status HUD Bar -->
+                                <div class="hud-top-meta">
+                                    <div class="meta-left">
+                                        <span class="pulse-dot green-pulse"></span> LIVE_FEED // MENTOR_AI
+                                    </div>
+                                    <div class="meta-right">NEURAL_LINK</div>
+                                </div>
+                                
+                                <video class="project-video-element" autoplay loop muted playsinline preload="auto">
+                                    <source src="assets/ai-mentor.mp4?v=2" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                
+                                <!-- Bottom Cyber Diagnostics Readout -->
+                                <div class="hud-bottom-readout">
+                                    <span>SYS: ACTIVE</span>
+                                    <span>ACCURACY: 97.8%</span>
+                                    <span>ENGINE: GPT_4o</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-overlay" style="pointer-events: none;">
+                                <div class="project-tech-pills">
+                                    <span>Python</span>
+                                    <span>Machine Learning</span>
+                                    <span>NLP</span>
+                                    <span>Recommendation</span>
+                                    <span>AI Chatbot</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Career Mentor</h3>
+                            <p class="project-tagline">AI-Powered Career Guidance & Advisory Platform</p>
+                            <p class="project-desc">
+                                Analyzes resumes, interests, and skills to recommend personalized career paths, identify skill gaps, suggest projects, recommend learning resources, provide interview preparation, and offer an AI mentor chatbot for continuous guidance.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Architectural Features:</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-file-invoice"></i> PDF Resume parsing & classification parser</li>
+                                    <li><i class="fa-solid fa-chart-pie"></i> Skill gap visualization dashboards</li>
+                                    <li><i class="fa-solid fa-comments"></i> LLM-driven AI Mentor chat agent interface</li>
+                                </ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/alhajbaig/AI-Career-mentor" target="_blank" class="btn btn-secondary btn-sm btn-magnetic">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-primary btn-sm btn-magnetic">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open For Opportunities (Bounty Board) -->
+        <section id="opportunities" class="opportunities-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 05. COLLABORATION PORTAL</span>
+                    <h2 class="section-title">Open For Opportunities</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="bounty-board-grid">
+                    <!-- Bounty 1 -->
+                    <div class="bounty-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="bounty-status">
+                            <span class="bounty-beacon active"></span>
+                            <span class="bounty-label">BOUNTY ACTIVE</span>
+                        </div>
+                        <div class="bounty-id">ID: INTERN-AIML</div>
+                        <div class="bounty-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>AI/ML Internships</h3>
+                        <p>Seeking winter/summer internships to apply deep learning, computer vision, or NLP to production platforms.</p>
+                        <button class="bounty-action-btn" onclick="initiateBountyInquiry('AI/ML Internship Opportunity')">
+                            Initiate Connection <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bounty 2 -->
+                    <div class="bounty-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="bounty-status">
+                            <span class="bounty-beacon active"></span>
+                            <span class="bounty-label">BOUNTY ACTIVE</span>
+                        </div>
+                        <div class="bounty-id">ID: RESEARCH-COLLAB</div>
+                        <div class="bounty-icon"><i class="fa-solid fa-microscope"></i></div>
+                        <h3>Research Projects</h3>
+                        <p>Eager to co-author papers or experiment on machine learning models with academic and industry labs.</p>
+                        <button class="bounty-action-btn" onclick="initiateBountyInquiry('Research Collaboration')">
+                            Initiate Connection <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bounty 3 -->
+                    <div class="bounty-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="bounty-status">
+                            <span class="bounty-beacon active"></span>
+                            <span class="bounty-label">BOUNTY ACTIVE</span>
+                        </div>
+                        <div class="bounty-id">ID: OPEN-SOURCE</div>
+                        <div class="bounty-icon"><i class="fa-solid fa-code-fork"></i></div>
+                        <h3>Open Source</h3>
+                        <p>Active contributor looking to build AI tooling, frameworks, libraries, and developer extensions.</p>
+                        <button class="bounty-action-btn" onclick="initiateBountyInquiry('Open Source Collaboration')">
+                            Initiate Connection <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bounty 4 -->
+                    <div class="bounty-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="bounty-status">
+                            <span class="bounty-beacon active"></span>
+                            <span class="bounty-label">BOUNTY ACTIVE</span>
+                        </div>
+                        <div class="bounty-id">ID: FREELANCE-AI</div>
+                        <div class="bounty-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Freelance AI Projects</h3>
+                        <p>Available for constructing custom RAG pipelines, fine-tuning APIs, web scraping, and NLP tools.</p>
+                        <button class="bounty-action-btn" onclick="initiateBountyInquiry('Freelance AI Project')">
+                            Initiate Connection <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bounty 5 -->
+                    <div class="bounty-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="bounty-status">
+                            <span class="bounty-beacon active"></span>
+                            <span class="bounty-label">BOUNTY ACTIVE</span>
+                        </div>
+                        <div class="bounty-id">ID: HACKATHON-TEAM</div>
+                        <div class="bounty-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>Hackathons</h3>
+                        <p>Always down to team up for major regional/international hackathons and build fast, cool prototypes.</p>
+                        <button class="bounty-action-btn" onclick="initiateBountyInquiry('Hackathon Team up')">
+                            Initiate Connection <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bounty 6 -->
+                    <div class="bounty-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="bounty-status">
+                            <span class="bounty-beacon active"></span>
+                            <span class="bounty-label">BOUNTY ACTIVE</span>
+                        </div>
+                        <div class="bounty-id">ID: TECH-COMMUNITY</div>
+                        <div class="bounty-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3>Technical Communities</h3>
+                        <p>Interested in speaking, mentor opportunities, workshop instruction, and hosting AI build-a-thons.</p>
+                        <button class="bounty-action-btn" onclick="initiateBountyInquiry('Technical Community Speaking/Mentorship')">
+                            Initiate Connection <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 06. MILESTONES & HONORS</span>
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="hologram-cabinet-grid">
+                    <!-- Achievement 1: VNIT -->
+                    <div class="achievement-holo-card glass-card vnit-achievement-card" data-tilt>
+                        <div class="holo-scanlines"></div>
+                        <div class="card-glow cyan-card-glow"></div>
+
+                        <!-- Top Badge Row -->
+                        <div class="tulsiram-badge-row">
+                            <div class="holo-status-tag unlocked vnit-status-tag">
+                                <i class="fa-solid fa-medal"></i> RUNNER-UP
+                            </div>
+                            <div class="holo-cert-hash">HASH // vnit-2025-runnerup</div>
+                        </div>
+
+                        <h3 class="vnit-title">🥈 Runner-up @ VNIT</h3>
+                        <div class="achievement-details-label">VNIT Nagpur &middot; 24h Hackathon</div>
+                        <p class="vnit-desc">Secured top runner-up spot out of over 100 teams by designing an AI-driven automation project under a 24-hour time constraint.</p>
+
+                        <!-- Glimpse Photo Panel -->
+                        <div class="vnit-media-panel">
+                            <div class="triptych-panel panel-photo">
+                                <div class="panel-label"><i class="fa-solid fa-camera"></i> GLIMPSE AT HACKATHON</div>
+                                <img src="assets/vnit-glimpse.jpg" alt="VNIT Hackathon Glimpse" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2: Tulsiram Gaikwad — Cinematic Media Card -->
+                    <div class="achievement-holo-card glass-card tulsiram-achievement-card" data-tilt>
+                        <div class="holo-scanlines"></div>
+                        <div class="card-glow gold-card-glow"></div>
+
+                        <!-- Top Badge Row -->
+                        <div class="tulsiram-badge-row">
+                            <div class="holo-status-tag unlocked">
+                                <i class="fa-solid fa-trophy"></i> CHAMPION
+                            </div>
+                            <div class="holo-cert-hash">HASH // tgce-2024-winner</div>
+                        </div>
+
+                        <h3 class="tulsiram-title">🏆 Championship Winner</h3>
+                        <div class="achievement-details-label">Tulsiram Gaikwad Patil College &middot; Hackathon</div>
+                        <p class="tulsiram-desc">Won the championship award by presenting an innovative intelligent software system demonstrating outstanding utility and UI execution.</p>
+
+                        <!-- Creative 3-Panel Media Triptych -->
+                        <div class="tulsiram-media-triptych">
+                            <!-- Panel 1: Award Ceremony Stage -->
+                            <div class="triptych-panel panel-photo">
+                                <div class="panel-label"><i class="fa-solid fa-award"></i> CEREMONY STAGE</div>
+                                <img src="assets/award-ceremony.jpg" alt="Award Ceremony Stage" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
+                            </div>
+
+                            <!-- Panels 2+3: Photo Stack -->
+                            <div class="triptych-photos">
+                                <div class="triptych-panel panel-photo">
+                                    <div class="panel-label"><i class="fa-solid fa-trophy"></i> WINNER</div>
+                                    <img src="assets/award-solo.jpg" alt="Championship Trophy & Certificate" class="triptych-img focus-top">
+                                    <div class="panel-corner-bracket tl"></div>
+                                    <div class="panel-corner-bracket br"></div>
+                                </div>
+                                <div class="triptych-panel panel-photo">
+                                    <div class="panel-label"><i class="fa-solid fa-users"></i> TEAM VICTORY</div>
+                                    <img src="assets/award-group.jpg" alt="Award Ceremony Group" class="triptych-img focus-top">
+                                    <div class="panel-corner-bracket tl"></div>
+                                    <div class="panel-corner-bracket br"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 07. VERIFIED CREDENTIALS</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <!-- Certifications Filtering System -->
+                <div class="certs-filter-nav">
+                    <button class="cert-filter-btn active" data-cert-filter="all">All Certificates</button>
+                    <button class="cert-filter-btn" data-cert-filter="specs">Specializations</button>
+                    <button class="cert-filter-btn" data-cert-filter="prompting">Prompting & AI</button>
+                    <button class="cert-filter-btn" data-cert-filter="ds">Data Science & Coding</button>
+                </div>
+
+                <div class="certs-total-badge">
+                    <i class="fa-solid fa-certificate"></i> 10 Verified Credentials &middot; Google & IBM
+                </div>
+
+                <div class="certs-showcase">
+                    <div class="certs-carousel-track" id="certs-carousel">
+
+                        <!-- Cert 1: Google Prompting Essentials (Specialization) -->
+                        <div class="cert-showcase-card" data-cert-cat="specs" onclick="openCertModal('Google Prompting Essentials', 'assets/cert-google-prompting.png', 'Specialization covering 4 courses: Start Writing Prompts like a Pro, Design Prompts for Everyday Work Tasks, Speed Up Data Analysis and Presentation Building, and Use AI as a Creative or Expert Partner.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-google-prompting.png" alt="Google Prompting Essentials Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Spec</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Google Prompting Essentials</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 30, 2026 &middot; 4 Courses</div>
+                                    <p class="cert-card-desc">Mastery of effective prompt design, advanced prompting techniques for complex tasks, data analysis, and creative AI partnership.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>Prompt Engineering</span>
+                                            <span>AI Tools</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/specialization/12XH3VZY1Y2H" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2: Google AI Essentials (Specialization) -->
+                        <div class="cert-showcase-card" data-cert-cat="specs" onclick="openCertModal('Google AI Essentials', 'assets/cert-google-ai-essentials.png', 'Specialization covering 5 courses: Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, and Stay Ahead of the AI Curve.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-google-ai-essentials.png" alt="Google AI Essentials Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Spec</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Google AI Essentials</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 27, 2026 &middot; 5 Courses</div>
+                                    <p class="cert-card-desc">Comprehensive AI skills covering responsible usage, productivity enhancement, and staying current with emerging AI technologies.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>AI Fundamentals</span>
+                                            <span>Responsible AI</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/specialization/N2ASDEPNLP18" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 3: Python for Data Science (IBM) -->
+                        <div class="cert-showcase-card" data-cert-cat="ds" onclick="openCertModal('Python for Data Science', 'assets/cert-python-ds.png', 'Professional credential authorized by IBM validating Python programming expertise for data analysis, databases, and general data science methods.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-python-ds.png" alt="Python for Data Science Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-solid fa-cube"></i></div>
+                                        <span class="cert-provider-name">IBM &middot; Credly</span>
+                                    </div>
+                                    <h3>Python for Data Science</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 26, 2026 &middot; Credential</div>
+                                    <p class="cert-card-desc">Validates data analysis, NumPy, Pandas manipulation, API interactions, and fundamental coding logic inside the Python ecosystem.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>Python</span>
+                                            <span>Data Science</span>
+                                        </div>
+                                        <a href="https://www.credly.com/badges/93f1490c-6f72-4fef-baf9-37e466bacb8b" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 4: Introduction to AI (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="prompting" onclick="openCertModal('Introduction to AI', 'assets/cert-intro-to-ai.png', 'Course Certificate authorized by Google covering foundational AI concepts, machine learning principles, and practical applications of artificial intelligence.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-intro-to-ai.png" alt="Introduction to AI Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Introduction to AI</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 27, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Foundational knowledge of artificial intelligence concepts, machine learning basics, and real-world AI application patterns.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>AI Concepts</span>
+                                            <span>ML Basics</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/9U5GX2MFJTFI" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 5: Maximize Productivity With AI Tools (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="prompting" onclick="openCertModal('Maximize Productivity With AI Tools', 'assets/cert-maximize-productivity.png', 'Course Certificate authorized by Google on leveraging AI tools to maximize workflow efficiency, automate repetitive tasks, and enhance professional output quality.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-maximize-productivity.png" alt="Maximize Productivity With AI Tools Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Maximize Productivity With AI</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 27, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Practical strategies for leveraging AI tools to automate workflows, enhance productivity, and deliver higher quality outputs.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>AI Productivity</span>
+                                            <span>Automation</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/EVNVWOP09EQV" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 6: Start Writing Prompts like a Pro (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="prompting" onclick="openCertModal('Start Writing Prompts like a Pro', 'assets/cert-writing-prompts.png', 'Course Certificate authorized by Google on professional prompt writing methodologies, prompt optimization techniques, and effective human-AI communication strategies.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-writing-prompts.png" alt="Start Writing Prompts like a Pro Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Writing Prompts like a Pro</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 27, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Expert-level prompt crafting techniques for precise AI outputs, iterative prompt refinement, and professional communication with LLMs.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>Prompt Design</span>
+                                            <span>LLMs</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/3GUGJVjWJRKU" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 7: Use AI as a Creative or Expert Partner (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="prompting" onclick="openCertModal('Use AI as a Creative or Expert Partner', 'assets/cert-google-creative-partner.png', 'Course Certificate authorized by Google focusing on collaborative frameworks between humans and AI, leveraging AI for creative brainstorming and expert advisory.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-google-creative-partner.png" alt="Use AI as a Creative or Expert Partner Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>AI as a Creative/Expert Partner</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 30, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Deep dive into deploying LLMs as creative sparring partners, advisory agents, and expert systems inside daily workflows.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>Creative AI</span>
+                                            <span>Advisory Agent</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/JNIQ5WNG5MOR" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 8: Speed Up Data Analysis and Presentation Building (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="ds" onclick="openCertModal('Speed Up Data Analysis and Presentation Building', 'assets/cert-google-data-analysis.png', 'Course Certificate authorized by Google covering AI-driven data synthesis, reporting, and building graphical presentation slides.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-google-data-analysis.png" alt="Speed Up Data Analysis and Presentation Building Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Data Analysis &amp; Presentation</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 29, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Leveraging generative AI modules to clean datasets, extract analytical trends, and construct executive presentation assets rapidly.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>Data Analysis</span>
+                                            <span>AI Presentation</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/KA1CZUWV2M24" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 9: Discover the Art of Prompting (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="prompting" onclick="openCertModal('Discover the Art of Prompting', 'assets/cert-google-art-of-prompting.png', 'Course Certificate authorized by Google demonstrating core prompt patterns, system prompt creation, and LLM tuning methods.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-google-art-of-prompting.png" alt="Discover the Art of Prompting Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Discover the Art of Prompting</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 27, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Advanced exploration of semantic prompt design, zero/few-shot modeling patterns, and structuring clean conversational inputs.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>Prompt Patterns</span>
+                                            <span>System Prompts</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/6K9PYUR9WB73" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 10: Use AI Responsibly (Google) -->
+                        <div class="cert-showcase-card" data-cert-cat="prompting" onclick="openCertModal('Use AI Responsibly', 'assets/cert-google-ai-responsibly.png', 'Course Certificate authorized by Google covering ethics of generative models, bias mitigation, and architectural frameworks for responsible AI deployments.')">
+                            <div class="cert-card-inner">
+                                <div class="cert-image-container">
+                                    <img src="assets/cert-google-ai-responsibly.png" alt="Use AI Responsibly Certificate" loading="lazy">
+                                    <div class="cert-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                                </div>
+                                <div class="cert-card-body">
+                                    <div class="cert-provider">
+                                        <div class="cert-provider-icon"><i class="fa-brands fa-google"></i></div>
+                                        <span class="cert-provider-name">Google via Coursera</span>
+                                    </div>
+                                    <h3>Use AI Responsibly</h3>
+                                    <div class="cert-card-date"><i class="fa-regular fa-calendar"></i> May 27, 2026 &middot; Course</div>
+                                    <p class="cert-card-desc">Architectural ethics, safety guardrails, hallucination prevention strategies, and compliance regulations for deployment of large language models.</p>
+                                    <div class="cert-card-footer">
+                                        <div class="cert-skills-tags">
+                                            <span>AI Safety</span>
+                                            <span>AI Ethics</span>
+                                        </div>
+                                        <a href="https://coursera.org/verify/Q30VURT6TLWW" target="_blank" class="cert-verify-link">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Navigation -->
+                    <div class="certs-nav">
+                        <button class="cert-nav-btn" id="cert-prev" aria-label="Previous Certificate"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="cert-counter"><span class="current-cert" id="cert-current">1</span> / <span id="cert-total">10</span></div>
+                        <button class="cert-nav-btn" id="cert-next" aria-label="Next Certificate"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">// 08. CONNECT INTERFACE</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="contact-terminal-grid">
+                    <!-- Left: Diagnostic HUD Console & Social Nodes -->
+                    <div class="terminal-hud-console glass-card">
+                        <div class="holo-scanlines"></div>
+                        <div class="card-glow"></div>
+                        <div class="hud-header">
+                            <span class="hud-title"><i class="fa-solid fa-satellite-dish"></i> TRANSMISSION DIAGNOSTICS</span>
+                            <span class="hud-status-badge">ONLINE</span>
+                        </div>
+                        
+                        <!-- Radar visual scanner -->
+                        <div class="radar-box-wrapper">
+                            <div class="radar-scanner">
+                                <div class="radar-sweep"></div>
+                                <div class="radar-ring r1"></div>
+                                <div class="radar-ring r2"></div>
+                                <div class="radar-ring r3"></div>
+                                <div class="radar-crosshairs"></div>
+                                <div class="radar-ping-dot"></div>
+                            </div>
+                        </div>
+
+                        <!-- Real-time HUD info logs -->
+                        <div class="hud-diagnostics">
+                            <div class="hud-stat-row">
+                                <span class="hud-label">COORDS:</span>
+                                <span class="hud-value">21.1458&deg; N, 79.0882&deg; E (NAGPUR)</span>
+                            </div>
+                            <div class="hud-stat-row">
+                                <span class="hud-label">SECURE_LINK:</span>
+                                <span class="hud-value active">ESTABLISHED (AES-256)</span>
+                            </div>
+                        </div>
+
+                        <!-- Highlighted Communication Nodes -->
+                        <div class="hud-comm-nodes-grid">
+                            <a href="https://github.com/alhajbaig" target="_blank" class="comm-node-card github-node">
+                                <div class="node-glow"></div>
+                                <div class="node-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="node-details">
+                                    <span class="node-platform">GITHUB</span>
+                                    <span class="node-handle">// alhajbaig</span>
+                                </div>
+                                <div class="node-status-indicator"><span class="pulse-dot green-pulse"></span> ONLINE</div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mirza-alhaj-baig-49b250308/" target="_blank" class="comm-node-card linkedin-node">
+                                <div class="node-glow"></div>
+                                <div class="node-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div class="node-details">
+                                    <span class="node-platform">LINKEDIN</span>
+                                    <span class="node-handle">// mirza-alhaj-baig</span>
+                                </div>
+                                <div class="node-status-indicator"><span class="pulse-dot green-pulse"></span> ONLINE</div>
+                            </a>
+                            <a href="mailto:alhajbaig2006@gmail.com" class="comm-node-card gmail-node">
+                                <div class="node-glow"></div>
+                                <div class="node-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="node-details">
+                                    <span class="node-platform">GMAIL</span>
+                                    <span class="node-handle">// alhajbaig2006</span>
+                                </div>
+                                <div class="node-status-indicator"><span class="pulse-dot green-pulse"></span> READY</div>
+                            </a>
+                            <a href="https://www.instagram.com/alhaj.bxig/" target="_blank" class="comm-node-card instagram-node">
+                                <div class="node-glow"></div>
+                                <div class="node-icon"><i class="fa-brands fa-instagram"></i></div>
+                                <div class="node-details">
+                                    <span class="node-platform">INSTAGRAM</span>
+                                    <span class="node-handle">// alhaj.bxig</span>
+                                </div>
+                                <div class="node-status-indicator"><span class="pulse-dot green-pulse"></span> ACTIVE</div>
+                            </a>
+                        </div>
+
+                        <!-- Running stream logs -->
+                        <div class="hud-stream-logs" id="hud-terminal-logs">
+                            <div class="log-line">> INITIALIZING QUANTUM P2P PORTAL...</div>
+                            <div class="log-line">> PORTAL INITIALIZED. PORT 443 ACTIVE.</div>
+                            <div class="log-line">> WAITING FOR INBOUND TRANSMISSION...</div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form Console -->
+                    <div class="contact-form-card glass-card">
+                        <div class="holo-scanlines"></div>
+                        <div class="card-glow"></div>
+                        
+                        <div class="form-card-header">
+                            <h3><i class="fa-solid fa-square-envelope"></i> SECURE_TRANSMISSION</h3>
+                            <span class="form-status-tag">SECURE_LINK // ACTIVE</span>
+                        </div>
+                        
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group-terminal">
+                                <label for="form-name">
+                                    <span class="label-tech-prefix">SNDR::</span>
+                                    <i class="fa-regular fa-user"></i> SENDER_IDENTITY
+                                </label>
+                                <div class="input-wrapper-terminal">
+                                    <input type="text" id="form-name" required placeholder="name / organization / agency">
+                                    <div class="input-bracket-lines"></div>
+                                </div>
+                            </div>
+                            <div class="form-group-terminal">
+                                <label for="form-email">
+                                    <span class="label-tech-prefix">ADDR::</span>
+                                    <i class="fa-regular fa-envelope"></i> RETURN_ADDRESS
+                                </label>
+                                <div class="input-wrapper-terminal">
+                                    <input type="email" id="form-email" required placeholder="name@domain.com">
+                                    <div class="input-bracket-lines"></div>
+                                </div>
+                            </div>
+                            <div class="form-group-terminal">
+                                <label for="form-message">
+                                    <span class="label-tech-prefix">DATA::</span>
+                                    <i class="fa-regular fa-comment-dots"></i> TRANSMISSION_CONTENT
+                                </label>
+                                <div class="input-wrapper-terminal">
+                                    <textarea id="form-message" required rows="5" placeholder="input transmission parameters or project details..."></textarea>
+                                    <div class="input-bracket-lines"></div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit btn-magnetic" id="submit-btn">
+                                <span>INITIALIZE SEND</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="form-feedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 Mirza Alhaj Baig. All rights reserved.</p>
+                <p class="footer-credit">Designed & Developed by Mirza Alhaj Baig</p>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-nav">
+                    <a href="https://github.com/alhajbaig" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/mirza-alhaj-baig-49b250308/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="assets/resume.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Certificate Preview Modal -->
+    <div class="modal" id="cert-modal" onclick="closeCertModalOutside(event)">
+        <div class="modal-content glass-card">
+            <span class="modal-close" onclick="closeCertModal()">&times;</span>
+            <h3 id="modal-title">Certificate Title</h3>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="Certificate Preview">
+                </div>
+                <p id="modal-desc">Certificate Description text...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "gySHO2qv7Ym8fEFFL",
+            });
+        })();
+    </script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
