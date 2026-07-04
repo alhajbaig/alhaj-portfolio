@@ -687,26 +687,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         certCards.forEach(card => certObserver.observe(card));
         updateCarouselCounters();
-
-        // ─── Project Video Playback Controller ───
-        const projectVideos = document.querySelectorAll('.project-video-element');
-        const forceVideoPlayback = () => {
-            projectVideos.forEach(video => {
-                if (video.paused) {
-                    video.play().catch(err => {
-                        console.warn("Video playback deferred: interaction required.", err);
-                    });
-                }
-            });
-        };
-        
-        // Trigger immediately on load
-        forceVideoPlayback();
-        
-        // Bind to common user actions to override browser sandboxes
-        ['click', 'touchstart', 'scroll'].forEach(evtType => {
-            document.addEventListener(evtType, forceVideoPlayback, { once: true, passive: true });
-        });
     }
 });
 
