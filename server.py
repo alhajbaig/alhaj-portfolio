@@ -3,7 +3,7 @@ import re
 import sys
 import shutil
 import mimetypes
-from http.server import SimpleHTTPRequestHandler, HTTPServer
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 class RangeRequestHandler(SimpleHTTPRequestHandler):
     def send_head(self):
@@ -97,7 +97,7 @@ if __name__ == '__main__':
         mimetypes.add_type('video/mp4', '.mp4')
         
     print(f"Starting custom development server on http://{bind_ip}:{port} with HTTP Range support...")
-    httpd = HTTPServer(server_address, RangeRequestHandler)
+    httpd = ThreadingHTTPServer(server_address, RangeRequestHandler)
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
