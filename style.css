@@ -1669,7 +1669,7 @@ section {
 /* --- Featured Projects --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -1797,6 +1797,17 @@ section {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(167, 139, 250, 0.22), inset 0 0 20px rgba(167, 139, 250, 0.15);
 }
 
+/* 3. Expensify (Gold/Amber Theme) */
+.expensify-theme .hud-monitor-viewport {
+    border: 1px solid rgba(251, 191, 36, 0.22);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(251, 191, 36, 0.08);
+}
+.project-card:hover .expensify-theme .hud-monitor-viewport {
+    transform: scale(1.02) translateZ(28px);
+    border-color: rgba(251, 191, 36, 0.55);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(251, 191, 36, 0.22), inset 0 0 20px rgba(251, 191, 36, 0.15);
+}
+
 /* HUD Corner Brackets with 3D Depth */
 .hud-bracket {
     position: absolute;
@@ -1834,6 +1845,17 @@ section {
     transform: translateZ(42px);
     border-color: #f472b6; /* Pink/Magenta highlight on hover */
     filter: drop-shadow(0 0 5px rgba(244, 114, 182, 0.7));
+}
+
+/* Expensify Brackets */
+.expensify-theme .hud-bracket {
+    border-color: #fbbf24;
+    filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.4));
+}
+.project-card:hover .expensify-theme .hud-bracket {
+    transform: translateZ(42px);
+    border-color: #fef08a; /* Gold/Yellow highlight on hover */
+    filter: drop-shadow(0 0 5px rgba(254, 240, 138, 0.7));
 }
 
 /* CRT Scanlines Grid overlay */
@@ -1894,6 +1916,9 @@ section {
 
 .mentor-theme .hud-top-meta .meta-right { color: var(--electric-purple); }
 .project-card:hover .mentor-theme .hud-top-meta .meta-right { color: #f472b6; }
+
+.expensify-theme .hud-top-meta .meta-right { color: #fbbf24; }
+.project-card:hover .expensify-theme .hud-top-meta .meta-right { color: #fef08a; }
 
 /* Bottom Cyber Diagnostics Readout */
 .hud-bottom-readout {
@@ -3264,8 +3289,11 @@ section {
         width: 280px;
         height: 280px;
     }
-    .about-dashboard-grid, .about-grid, .skills-dashboard, .projects-grid, .hologram-cabinet-grid, .contact-grid {
+    .about-dashboard-grid, .about-grid, .skills-dashboard, .hologram-cabinet-grid, .contact-grid {
         grid-template-columns: 1fr;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     .tulsiram-media-triptych {
         grid-template-columns: 1fr;
@@ -3367,6 +3395,9 @@ section {
     .cert-showcase-card {
         min-width: 290px;
         max-width: 290px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
