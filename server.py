@@ -8,6 +8,9 @@ from http.server import SimpleHTTPRequestHandler, HTTPServer
 class RangeRequestHandler(SimpleHTTPRequestHandler):
     def send_head(self):
         """Common code for GET and HEAD commands to handle Range requests."""
+        # Strip query string before resolving file path
+        if '?' in self.path:
+            self.path = self.path.split('?')[0]
         path = self.translate_path(self.path)
         
         # If the path is a directory, let the base class handle it
