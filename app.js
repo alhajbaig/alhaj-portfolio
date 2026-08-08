@@ -49,24 +49,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // MOBILE NAVIGATION DRAWER TOGGLE SYSTEM
+    // MOBILE NAVIGATION DRAWER TOGGLE SYSTEM (with Backdrop Overlay)
     // ----------------------------------------------------------------------
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    function openMobileDrawer() {
+        if (navToggle) navToggle.classList.add('active');
+        if (navMenu) navMenu.classList.add('active');
+        if (navOverlay) navOverlay.classList.add('active');
+        document.body.classList.add('nav-drawer-open');
+        const hdr = document.getElementById('main-header');
+        if (hdr) hdr.classList.add('nav-drawer-active');
+    }
+
+    function closeMobileDrawer() {
+        if (navToggle) navToggle.classList.remove('active');
+        if (navMenu) navMenu.classList.remove('active');
+        if (navOverlay) navOverlay.classList.remove('active');
+        document.body.classList.remove('nav-drawer-open');
+        const hdr = document.getElementById('main-header');
+        if (hdr) hdr.classList.remove('nav-drawer-active');
+    }
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('nav-drawer-open');
+            const isOpen = navMenu.classList.contains('active');
+            if (isOpen) {
+                closeMobileDrawer();
+            } else {
+                openMobileDrawer();
+            }
         });
 
+        // Close drawer when a nav link is tapped
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.classList.remove('nav-drawer-open');
+                closeMobileDrawer();
             });
+        });
+    }
+
+    // Close drawer when tapping the backdrop overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', () => {
+            closeMobileDrawer();
         });
     }
 
@@ -447,13 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            if (mainHeader) mainHeader.classList.add('scrolled');
-        } else {
-            if (mainHeader) mainHeader.classList.remove('scrolled');
-        }
-    });
+    // Note: scrolled class is handled by the main scroll listener in section 8
 
     window.addEventListener('resize', updateNavIndicator);
     setTimeout(updateNavIndicator, 300);
@@ -589,33 +611,86 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 8. NAVBAR SCROLL & ACTIVE LINK HIGHLIGHTING
+    // 8. NAVBAR SCROLL & ACTIVE LINK HIGHLIGHTING + MOBILE AUTO-HIDE
     // ----------------------------------------------------------------------
     const header = document.querySelector('.header');
     const sections = document.querySelectorAll('section');
     const allNavLinks = document.querySelectorAll('.nav-link');
     const backToTop = document.getElementById('back-to-top');
 
+    // Smart scroll-direction header auto-hide (primarily for mobile)
+    let lastScrollY = window.scrollY;
+    let scrollDelta = 0;
+    const HIDE_THRESHOLD = 80;  // px scrolled down before hiding
+    const SHOW_THRESHOLD = 15;  // px scrolled up before showing
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const currentScrollY = window.scrollY;
+
+        // Scrolled class for visual state
+        if (currentScrollY > 50) {
             if (header) header.classList.add('scrolled');
         } else {
             if (header) header.classList.remove('scrolled');
         }
 
+        // Back-to-top button
         if (backToTop) {
-            if (window.scrollY > 500) {
+            if (currentScrollY > 500) {
                 backToTop.classList.add('show');
             } else {
                 backToTop.classList.remove('show');
             }
         }
 
+        // --- Mobile Auto-Hide Header on Scroll Direction ---
+        // Only apply auto-hide on mobile viewports (<=768px)
+        // Never hide when the mobile drawer is open
+        const isMobile = window.innerWidth <= 768;
+        const drawerIsOpen = document.body.classList.contains('nav-drawer-open');
+
+        if (header && isMobile && !drawerIsOpen) {
+            const delta = currentScrollY - lastScrollY;
+
+            if (delta > 0) {
+                // Scrolling DOWN
+                scrollDelta += delta;
+                if (scrollDelta > HIDE_THRESHOLD && currentScrollY > HIDE_THRESHOLD) {
+                    header.classList.add('header-hidden');
+                }
+            } else if (delta < 0) {
+                // Scrolling UP
+                scrollDelta += delta;
+                if (scrollDelta < -SHOW_THRESHOLD || currentScrollY < 60) {
+                    header.classList.remove('header-hidden');
+                    scrollDelta = 0;
+                }
+            }
+
+            // Reset delta accumulator on direction change
+            if ((delta > 0 && scrollDelta < 0) || (delta < 0 && scrollDelta > 0)) {
+                scrollDelta = delta;
+            }
+
+            // Always show header near the very top
+            if (currentScrollY < 60) {
+                header.classList.remove('header-hidden');
+                scrollDelta = 0;
+            }
+        } else if (header && !isMobile) {
+            // Always visible on desktop
+            header.classList.remove('header-hidden');
+            scrollDelta = 0;
+        }
+
+        lastScrollY = currentScrollY;
+
+        // Active section highlighting
         let currentSectionId = '';
         sections.forEach(sec => {
             const secTop = sec.offsetTop - 120;
             const secHeight = sec.clientHeight;
-            if (window.scrollY >= secTop && window.scrollY < secTop + secHeight) {
+            if (currentScrollY >= secTop && currentScrollY < secTop + secHeight) {
                 currentSectionId = sec.getAttribute('id');
             }
         });
@@ -630,7 +705,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof updateNavIndicator === 'function') {
             updateNavIndicator();
         }
-    });
+    }, { passive: true });
 
     if (backToTop) {
         backToTop.addEventListener('click', () => {
