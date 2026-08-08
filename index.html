@@ -14,13 +14,18 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5.0">
 </head>
 <body>
 
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
+    <!-- Custom Cursor System -->
+    <div class="custom-cursor">
+        <span class="cursor-text"></span>
+    </div>
     <div class="custom-cursor-dot"></div>
 
     <!-- Background Neural Network Canvas -->
@@ -163,139 +168,211 @@
             </a>
         </section>
 
-        <!-- About Section -->
+        <!-- About Section (Cyberpunk Holographic Command Core) -->
         <section id="about" class="about-section section-reveal">
-            <!-- Background Glows for Depth -->
             <div class="about-glow-orb orb-1"></div>
             <div class="about-glow-orb orb-2"></div>
 
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">// 01. COGNITIVE ARCHITECTURE</span>
-                    <h2 class="section-title">About Alhaj</h2>
+                    <span class="section-subtitle">// 01. COGNITIVE ARCHITECTURE & SYSTEM DOSSIER</span>
+                    <h2 class="section-title">About Mirza Alhaj Baig</h2>
                     <div class="title-line"></div>
                 </div>
 
-                <div class="about-dashboard-grid">
-                    <!-- Column 1: Bio & Stats (Left) -->
-                    <div class="about-left-col">
-                        <!-- Biography Card -->
-                        <div class="bio-narrative-card glass-card">
-                            <div class="card-glow"></div>
-                            <div class="quote-intro">
-                                "Engineering cognitive systems that bridge human intent and machine execution."
-                            </div>
-                            <div class="bio-paragraphs">
-                                <p>
-                                    I am a third-year <strong>B.Tech Computer Science &amp; Engineering</strong> student at <strong>GCOEN (Government College of Engineering, Nagpur)</strong>. Driven by a deep curiosity about intelligence systems, I specialized my studies in Machine Learning, Large Language Models, and Natural Language Processing.
-                                </p>
-                                <p>
-                                    My work focuses on constructing robust, intelligent solutions to real-world challenges. Whether architecting Retrieval-Augmented Generation (RAG) pipelines, building deep neural networks, or optimization workflows, I aim to push the boundaries of modern AI engineering.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Stats Dashboard Grid -->
-                        <div class="stats-dashboard-grid">
-                            <div class="stat-card glass-card">
-                                <div class="card-glow"></div>
-                                <div class="counter-num" data-target="2">0</div>
-                                <div class="stat-card-lbl">Hackathons Placed</div>
-                            </div>
-                            <div class="stat-card glass-card">
-                                <div class="card-glow"></div>
-                                <div class="counter-num" data-target="10">0</div>
-                                <div class="stat-card-lbl">Projects Done</div>
-                            </div>
-                            <div class="stat-card glass-card">
-                                <div class="card-glow"></div>
-                                <div class="counter-num" data-target="15">0</div>
-                                <div class="stat-card-lbl">Tech Stacks</div>
-                            </div>
-                            <div class="stat-card glass-card">
-                                <div class="card-glow"></div>
-                                <div class="counter-num" data-target="2">0</div>
-                                <div class="stat-card-lbl">AI Internships</div>
-                            </div>
+                <div class="about-command-matrix">
+                    <!-- Top Hero Quote Banner -->
+                    <div class="about-quote-banner glass-card">
+                        <div class="card-glow purple-card-glow"></div>
+                        <div class="quote-content">
+                            <i class="fa-solid fa-quote-left quote-mark"></i>
+                            <span class="quote-text">Engineering cognitive systems that bridge human intent and machine execution.</span>
+                            <span class="quote-subtext">3rd Year B.Tech CSE Student @ GCOEN &middot; 3x National Hackathon Podium Finisher</span>
                         </div>
                     </div>
 
-                    <!-- Column 2: IDE & Timeline (Right) -->
-                    <div class="about-right-col">
-                        <!-- Premium Code Editor Terminal -->
+                    <!-- 4 Interactive Capability Modules Grid -->
+                    <div class="capability-modules-grid">
+                        <!-- Module 1: RAG & LLMs -->
+                        <div class="cap-module-card glass-card" data-tilt>
+                            <div class="card-glow cyan-card-glow"></div>
+                            <div class="cap-icon-box"><i class="fa-solid fa-brain"></i></div>
+                            <h3>RAG &amp; LLM Systems Architect</h3>
+                            <div class="cap-stat-tag"><i class="fa-solid fa-bolt"></i> 99.2% Vector Precision</div>
+                            <p>Designing production vector retrieval pipelines, fine-tuning open-weights models (LLaMA-3, Mistral), and implementing Supabase pgvector embeddings.</p>
+                        </div>
+
+                        <!-- Module 2: Loss Landscape -->
+                        <div class="cap-module-card glass-card" data-tilt>
+                            <div class="card-glow purple-card-glow"></div>
+                            <div class="cap-icon-box"><i class="fa-solid fa-chart-area"></i></div>
+                            <h3>Loss Landscape &amp; Optimization</h3>
+                            <div class="cap-stat-tag"><i class="fa-solid fa-fire"></i> 3D Optimizer Simulators</div>
+                            <p>Bridging mathematical intuition and neural network behavior through 3D gradient descent visualizations (SGD, Momentum, AdaGrad, RMSprop, Adam).</p>
+                        </div>
+
+                        <!-- Module 3: Vision AI -->
+                        <div class="cap-module-card glass-card" data-tilt>
+                            <div class="card-glow gold-card-glow"></div>
+                            <div class="cap-icon-box"><i class="fa-solid fa-eye"></i></div>
+                            <h3>Vision AI &amp; Edge Models</h3>
+                            <div class="cap-stat-tag"><i class="fa-solid fa-microchip"></i> Real-Time Inference</div>
+                            <p>Constructing real-time object tracking, image segmentation, and lightweight edge-deployed computer vision networks.</p>
+                        </div>
+
+                        <!-- Module 4: Competitive Engineering -->
+                        <div class="cap-module-card glass-card" data-tilt>
+                            <div class="card-glow cyan-card-glow"></div>
+                            <div class="cap-icon-box"><i class="fa-solid fa-trophy"></i></div>
+                            <h3>Competitive Hackathon Builder</h3>
+                            <div class="cap-stat-tag"><i class="fa-solid fa-medal"></i> 3x National Podiums</div>
+                            <p>1st Runner-Up @ Smackathon 2026 (350+ Teams), 1st Runner-Up @ VNIT (400+ Teams), and Championship Winner @ TGCE (60+ Teams).</p>
+                        </div>
+                    </div>
+
+                    <!-- Middle Row: IDE Terminal & Academic Journey -->
+                    <div class="about-split-row">
+                        <!-- Left: Live Cyberpunk Python IDE Terminal -->
                         <div class="about-terminal-panel glass-card">
-                            <div class="card-glow"></div>
+                            <div class="card-glow purple-card-glow"></div>
                             <div class="terminal-hud-header">
                                 <div class="terminal-controls">
                                     <span class="t-dot red"></span>
                                     <span class="t-dot yellow"></span>
                                     <span class="t-dot green"></span>
                                 </div>
-                                <div class="terminal-tab-lbl">alhaj_baig.py</div>
-                                <div class="terminal-connection-indicator">
-                                    <span class="conn-pulse"></span> SYSTEM OK
+                                <div class="terminal-tab-lbl"><i class="fa-brands fa-python"></i> alhaj_dossier.py</div>
+                                <div class="terminal-actions">
+                                    <button class="term-action-btn run-btn" id="run-terminal-btn" title="Initiate Cognitive Scan">
+                                        <i class="fa-solid fa-play"></i> INITIATE SCAN
+                                    </button>
+                                    <button class="term-action-btn copy-btn" id="copy-terminal-btn" title="Copy Dossier Code">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
                                 </div>
                             </div>
                             
                             <div class="terminal-code-viewport">
-                                <pre><code><span class="code-keyword">import</span> intelligence <span class="code-keyword">as</span> ai
+                                <pre><code id="python-dossier-code"><span class="code-keyword">import</span> torch
+<span class="code-keyword">from</span> neural_core <span class="code-keyword">import</span> Developer, AIModel
 
-<span class="code-comment"># Initializing AI Developer specifications</span>
-engineer = ai.Developer(
-    identity=<span class="code-str">"Alhaj Baig"</span>,
-    specialties=[<span class="code-str">"LLMs"</span>, <span class="code-str">"RAG"</span>, <span class="code-str">"CV"</span>],
-    status=<span class="code-str">"Ready for Internships"</span>
+<span class="code-comment"># Initializing Mirza Alhaj Baig Cognitive Matrix</span>
+alhaj = Developer(
+    identity=<span class="code-str">"Mirza Alhaj Baig"</span>,
+    degree=<span class="code-str">"B.Tech CSE @ GCOEN (2024-Present)"</span>,
+    specialization=[<span class="code-str">"LLMs"</span>, <span class="code-str">"RAG Architecture"</span>, <span class="code-str">"Computer Vision"</span>],
+    podiums=[
+        <span class="code-str">"🥈 1st Runner-Up @ Smackathon 2026 (350+ Teams)"</span>,
+        <span class="code-str">"🏆 Champion @ Tulsiram Gaikwad (60+ Teams)"</span>,
+        <span class="code-str">"🥈 1st Runner-Up @ VNIT Nagpur (400+ Teams)"</span>
+    ]
 )
 
-engineer.run_intelligence_pipeline()</code></pre>
+<span class="code-comment"># Launch real-time neural execution</span>
+alhaj.execute_pipeline(mode=<span class="code-str">"STRICT_OPTIMIZATION"</span>, status=<span class="code-str">"OPEN_FOR_INTERNSHIPS"</span>)</code></pre>
+                            </div>
+
+                            <!-- Live Console Execution Output Log -->
+                            <div class="terminal-console-output" id="terminal-console-output">
+                                <div class="console-output-header">
+                                    <span class="console-output-title"><i class="fa-solid fa-terminal"></i> DIAGNOSTIC CONSOLE OUTPUT</span>
+                                    <span class="console-clear-btn" id="clear-console-btn"><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                                <div class="console-log-rows" id="console-log-rows"></div>
                             </div>
                         </div>
 
-                        <!-- Milestone Timeline Capsules -->
+                        <!-- Right: Academic & Competitive Milestones -->
                         <div class="timeline-capsule-deck">
-                            <h3 class="deck-title">// KEY ACADEMIC MILESTONES</h3>
+                            <h3 class="deck-title">// KEY ACADEMIC &amp; COMPETITIVE MILESTONES</h3>
                             
-                            <!-- Capsule 1 -->
+                            <!-- Capsule 1: GCOEN -->
                             <div class="timeline-capsule glass-card">
                                 <div class="card-glow"></div>
                                 <div class="capsule-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                                 <div class="capsule-content">
                                     <div class="capsule-meta">
-                                        <h4>B.Tech in Computer Science</h4>
+                                        <h4>B.Tech in Computer Science &amp; Engineering</h4>
                                         <span class="capsule-date">2024 – Present</span>
                                     </div>
-                                    <div class="capsule-school">Government College of Engineering, Nagpur</div>
-                                    <p>Focusing on computation models, algorithmic logic, and specialized deep learning architectures.</p>
+                                    <div class="capsule-school">Government College of Engineering, Nagpur (GCOEN)</div>
+                                    <p>Focusing on neural networks, advanced data structures, and computational optimization logic.</p>
                                 </div>
                             </div>
 
-                            <!-- Capsule 2 -->
+                            <!-- Capsule 2: Smackathon -->
+                            <div class="timeline-capsule glass-card highlight-capsule">
+                                <div class="card-glow purple-card-glow"></div>
+                                <div class="capsule-icon trophy-icon"><i class="fa-solid fa-medal"></i></div>
+                                <div class="capsule-content">
+                                    <div class="capsule-meta">
+                                        <h4>1st Runner-Up @ Smackathon 2026</h4>
+                                        <span class="capsule-date badge-date">2026</span>
+                                    </div>
+                                    <div class="capsule-school">YCCE College &middot; 350+ Teams &middot; ₹10,000 Prize</div>
+                                    <p>Selected out of 350+ teams to top 25 finalists. Created <em>Into The Algorithm</em> visualizer platform.</p>
+                                </div>
+                            </div>
+
+                            <!-- Capsule 3: VNIT -->
                             <div class="timeline-capsule glass-card">
                                 <div class="card-glow"></div>
                                 <div class="capsule-icon"><i class="fa-solid fa-trophy"></i></div>
                                 <div class="capsule-content">
                                     <div class="capsule-meta">
-                                        <h4>Runner-up @ 24h Hackathon</h4>
+                                        <h4>1st Runner-Up @ VNIT 24h Hackathon</h4>
                                         <span class="capsule-date">2025</span>
                                     </div>
-                                    <div class="capsule-school">VNIT Nagpur</div>
-                                    <p>Developed an architectural AI prototype under high-pressure competitive team conditions.</p>
+                                    <div class="capsule-school">VNIT Nagpur &middot; 400+ Teams Applied &middot; Top 80 Offline</div>
+                                    <p>Selected among top 80 offline finalists from 400+ applications; built automated AI solution under 24h limit.</p>
                                 </div>
                             </div>
 
-                            <!-- Capsule 3 -->
+                            <!-- Capsule 4: Tulsiram Gaikwad -->
                             <div class="timeline-capsule glass-card">
                                 <div class="card-glow"></div>
-                                <div class="capsule-icon"><i class="fa-solid fa-medal"></i></div>
+                                <div class="capsule-icon"><i class="fa-solid fa-award"></i></div>
                                 <div class="capsule-content">
                                     <div class="capsule-meta">
-                                        <h4>Winner @ College Hackathon</h4>
+                                        <h4>Championship Winner @ Hackathon</h4>
                                         <span class="capsule-date">2024</span>
                                     </div>
-                                    <div class="capsule-school">Tulsiram Gaikwad College</div>
-                                    <p>Won first place by designing a computer vision and localized edge model pipeline solution.</p>
+                                    <div class="capsule-school">Tulsiram Gaikwad College &middot; 60+ Teams</div>
+                                    <p>Won 1st Place Champion out of 60+ teams presenting intelligent vision and localized edge model pipeline.</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Stats Dashboard Grid -->
+                    <div class="stats-dashboard-grid">
+                        <div class="stat-card glass-card" data-tilt>
+                            <div class="card-glow cyan-card-glow"></div>
+                            <div class="stat-icon-badge"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="counter-num" data-target="3">0</div>
+                            <div class="stat-card-lbl">Hackathon Podiums</div>
+                            <div class="stat-sublabel">Smackathon, VNIT &amp; TGCE</div>
+                        </div>
+                        <div class="stat-card glass-card" data-tilt>
+                            <div class="card-glow purple-card-glow"></div>
+                            <div class="stat-icon-badge"><i class="fa-solid fa-users"></i></div>
+                            <div class="counter-num" data-target="460">0</div>
+                            <div class="stat-card-lbl">Teams Competed Against</div>
+                            <div class="stat-sublabel">350+ YCCE, 400+ VNIT, 60+ TGCE</div>
+                        </div>
+                        <div class="stat-card glass-card" data-tilt>
+                            <div class="card-glow gold-card-glow"></div>
+                            <div class="stat-icon-badge"><i class="fa-solid fa-cubes"></i></div>
+                            <div class="counter-num" data-target="10">0</div>
+                            <div class="stat-card-lbl">Projects Completed</div>
+                            <div class="stat-sublabel">3D ML Visualizers &amp; RAG</div>
+                        </div>
+                        <div class="stat-card glass-card" data-tilt>
+                            <div class="card-glow cyan-card-glow"></div>
+                            <div class="stat-icon-badge"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="counter-num" data-target="2">0</div>
+                            <div class="stat-card-lbl">AI Internships</div>
+                            <div class="stat-sublabel">Cognifyz &amp; QSkill</div>
                         </div>
                     </div>
                 </div>
@@ -378,161 +455,285 @@ engineer.run_intelligence_pipeline()</code></pre>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills Section — Neural Architecture Map -->
         <section id="skills" class="skills-section section-reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">// 03. INTELLECTUAL ARMORY</span>
-                    <h2 class="section-title">Technical Skills</h2>
+                    <span class="section-subtitle">// 03. NEURAL ARCHITECTURE</span>
+                    <h2 class="section-title">Technical Stack</h2>
                     <div class="title-line"></div>
                 </div>
 
-                <!-- Skills Category Navigation Filters -->
-                <div class="skills-filter-nav">
-                    <button class="filter-btn active" data-filter="all">All Armory</button>
-                    <button class="filter-btn" data-filter="aiml">AI & ML</button>
-                    <button class="filter-btn" data-filter="languages">Languages</button>
-                    <button class="filter-btn" data-filter="data">Data Science</button>
-                    <button class="filter-btn" data-filter="tools">Dev Tools</button>
+                <!-- Interactive Filter Orbit -->
+                <div class="skills-filter-nav" role="tablist" aria-label="Skill categories">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                        <span class="filter-icon"><i class="fa-solid fa-layer-group"></i></span>
+                        <span>All Nodes</span>
+                    </button>
+                    <button class="filter-btn" data-filter="aiml" role="tab" aria-selected="false">
+                        <span class="filter-icon"><i class="fa-solid fa-brain"></i></span>
+                        <span>AI & ML</span>
+                    </button>
+                    <button class="filter-btn" data-filter="languages" role="tab" aria-selected="false">
+                        <span class="filter-icon"><i class="fa-solid fa-code"></i></span>
+                        <span>Languages</span>
+                    </button>
+                    <button class="filter-btn" data-filter="data" role="tab" aria-selected="false">
+                        <span class="filter-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        <span>Data Science</span>
+                    </button>
+                    <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">
+                        <span class="filter-icon"><i class="fa-solid fa-sliders"></i></span>
+                        <span>Dev Tools</span>
+                    </button>
                 </div>
 
-                <div class="skills-dashboard" id="skills-container">
-                    <!-- Programming -->
-                    <div class="skills-category-card glass-card" data-category="languages">
-                        <div class="card-glow"></div>
-                        <h3 class="category-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Python</span>
-                                    <span class="skill-percentage">95%</span>
+                <!-- Skills Neural Grid -->
+                <div class="skills-neural-grid" id="skills-container">
+
+                    <!-- ═══ Programming Languages ═══ -->
+                    <div class="skill-node-card" data-category="languages">
+                        <div class="node-card-border"></div>
+                        <div class="node-card-glow"></div>
+                        <div class="node-header">
+                            <div class="node-icon-ring">
+                                <div class="node-icon-pulse"></div>
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <div class="node-header-text">
+                                <h3>Programming Languages</h3>
+                                <span class="node-status"><span class="status-dot"></span>3 ACTIVE NODES</span>
+                            </div>
+                        </div>
+                        <div class="node-skills-stack">
+                            <div class="node-skill-row" data-level="95">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon"><i class="fa-brands fa-python"></i></span>
+                                    <span class="skill-label">Python</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 95%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill" style="--fill-width: 95%;" data-fill="95"></div>
+                                        <div class="skill-level-glow"></div>
+                                    </div>
+                                    <span class="skill-value">95<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Java</span>
-                                    <span class="skill-percentage">80%</span>
+                            <div class="node-skill-row" data-level="80">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon"><i class="fa-brands fa-java"></i></span>
+                                    <span class="skill-label">Java</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 80%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill" style="--fill-width: 80%;" data-fill="80"></div>
+                                        <div class="skill-level-glow"></div>
+                                    </div>
+                                    <span class="skill-value">80<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML / CSS</span>
-                                    <span class="skill-percentage">90%</span>
+                            <div class="node-skill-row" data-level="90">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon"><i class="fa-brands fa-html5"></i></span>
+                                    <span class="skill-label">HTML / CSS</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 90%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill" style="--fill-width: 90%;" data-fill="90"></div>
+                                        <div class="skill-level-glow"></div>
+                                    </div>
+                                    <span class="skill-value">90<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- AI & ML -->
-                    <div class="skills-category-card glass-card" data-category="aiml">
-                        <div class="card-glow"></div>
-                        <h3 class="category-title"><i class="fa-solid fa-brain"></i> AI & Machine Learning</h3>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Scikit-Learn</span>
-                                    <span class="skill-percentage">90%</span>
+                    <!-- ═══ AI & Machine Learning ═══ -->
+                    <div class="skill-node-card" data-category="aiml">
+                        <div class="node-card-border"></div>
+                        <div class="node-card-glow"></div>
+                        <div class="node-header">
+                            <div class="node-icon-ring accent-purple">
+                                <div class="node-icon-pulse"></div>
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="node-header-text">
+                                <h3>AI & Machine Learning</h3>
+                                <span class="node-status"><span class="status-dot dot-purple"></span>3 ACTIVE NODES</span>
+                            </div>
+                        </div>
+                        <div class="node-skills-stack">
+                            <div class="node-skill-row" data-level="90">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon hex-purple"><i class="fa-solid fa-gears"></i></span>
+                                    <span class="skill-label">Scikit-Learn</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 90%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill fill-purple" style="--fill-width: 90%;" data-fill="90"></div>
+                                        <div class="skill-level-glow glow-purple"></div>
+                                    </div>
+                                    <span class="skill-value val-purple">90<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">TensorFlow / Deep Learning</span>
-                                    <span class="skill-percentage">85%</span>
+                            <div class="node-skill-row" data-level="85">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon hex-purple"><i class="fa-solid fa-network-wired"></i></span>
+                                    <span class="skill-label">TensorFlow / Deep Learning</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 85%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill fill-purple" style="--fill-width: 85%;" data-fill="85"></div>
+                                        <div class="skill-level-glow glow-purple"></div>
+                                    </div>
+                                    <span class="skill-value val-purple">85<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">NLP & Large Language Models</span>
-                                    <span class="skill-percentage">88%</span>
+                            <div class="node-skill-row" data-level="88">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon hex-purple"><i class="fa-solid fa-language"></i></span>
+                                    <span class="skill-label">NLP & Large Language Models</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 88%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill fill-purple" style="--fill-width: 88%;" data-fill="88"></div>
+                                        <div class="skill-level-glow glow-purple"></div>
+                                    </div>
+                                    <span class="skill-value val-purple">88<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Data Science -->
-                    <div class="skills-category-card glass-card" data-category="data">
-                        <div class="card-glow"></div>
-                        <h3 class="category-title"><i class="fa-solid fa-chart-line"></i> Data Science</h3>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">NumPy / Pandas</span>
-                                    <span class="skill-percentage">92%</span>
+                    <!-- ═══ Data Science ═══ -->
+                    <div class="skill-node-card" data-category="data">
+                        <div class="node-card-border"></div>
+                        <div class="node-card-glow"></div>
+                        <div class="node-header">
+                            <div class="node-icon-ring accent-emerald">
+                                <div class="node-icon-pulse"></div>
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <div class="node-header-text">
+                                <h3>Data Science</h3>
+                                <span class="node-status"><span class="status-dot dot-emerald"></span>3 ACTIVE NODES</span>
+                            </div>
+                        </div>
+                        <div class="node-skills-stack">
+                            <div class="node-skill-row" data-level="92">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon hex-emerald"><i class="fa-solid fa-table-columns"></i></span>
+                                    <span class="skill-label">NumPy / Pandas</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 92%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill fill-emerald" style="--fill-width: 92%;" data-fill="92"></div>
+                                        <div class="skill-level-glow glow-emerald"></div>
+                                    </div>
+                                    <span class="skill-value val-emerald">92<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Matplotlib / Seaborn</span>
-                                    <span class="skill-percentage">85%</span>
+                            <div class="node-skill-row" data-level="85">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon hex-emerald"><i class="fa-solid fa-chart-area"></i></span>
+                                    <span class="skill-label">Matplotlib / Seaborn</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 85%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill fill-emerald" style="--fill-width: 85%;" data-fill="85"></div>
+                                        <div class="skill-level-glow glow-emerald"></div>
+                                    </div>
+                                    <span class="skill-value val-emerald">85<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">SQL Databases</span>
-                                    <span class="skill-percentage">80%</span>
+                            <div class="node-skill-row" data-level="80">
+                                <div class="skill-row-left">
+                                    <span class="skill-hex-icon hex-emerald"><i class="fa-solid fa-database"></i></span>
+                                    <span class="skill-label">SQL Databases</span>
                                 </div>
-                                <div class="progress-track">
-                                    <div class="progress-bar" style="width: 80%"></div>
+                                <div class="skill-row-right">
+                                    <div class="skill-level-track">
+                                        <div class="skill-level-fill fill-emerald" style="--fill-width: 80%;" data-fill="80"></div>
+                                        <div class="skill-level-glow glow-emerald"></div>
+                                    </div>
+                                    <span class="skill-value val-emerald">80<span class="skill-unit">%</span></span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Developer Tools -->
-                    <div class="skills-category-card glass-card" data-category="tools">
-                        <div class="card-glow"></div>
-                        <h3 class="category-title"><i class="fa-solid fa-sliders"></i> Developer Tools</h3>
-                        <div class="skills-grid-badges">
-                            <span class="tech-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
-                            <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
-                            <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
-                            <span class="tech-badge"><i class="fa-solid fa-code"></i> VS Code</span>
-                            <span class="tech-badge"><i class="fa-solid fa-book-open"></i> Jupyter</span>
-                            <span class="tech-badge"><i class="fa-solid fa-cloud"></i> Colab</span>
-                        </div>
-                        
-                        <!-- Circular Skill Meter container -->
-                        <div class="circular-meters">
-                            <div class="circle-meter-box">
-                                <svg class="circle-svg" viewBox="0 0 80 80">
-                                    <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
-                                    <circle class="circle-progress" cx="40" cy="40" r="30" style="stroke-dashoffset: 38; stroke: var(--electric-purple);"></circle>
-                                </svg>
-                                <span class="circle-label">Git Flow</span>
+                    <!-- ═══ Developer Tools ═══ -->
+                    <div class="skill-node-card" data-category="tools">
+                        <div class="node-card-border"></div>
+                        <div class="node-card-glow"></div>
+                        <div class="node-header">
+                            <div class="node-icon-ring accent-amber">
+                                <div class="node-icon-pulse"></div>
+                                <i class="fa-solid fa-wrench"></i>
                             </div>
-                            <div class="circle-meter-box">
-                                <svg class="circle-svg" viewBox="0 0 80 80">
-                                    <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
-                                    <circle class="circle-progress" cx="40" cy="40" r="30" style="stroke-dashoffset: 56; stroke: var(--neon-blue);"></circle>
-                                </svg>
-                                <span class="circle-label">Containers</span>
+                            <div class="node-header-text">
+                                <h3>Developer Tools</h3>
+                                <span class="node-status"><span class="status-dot dot-amber"></span>TOOLCHAIN ACTIVE</span>
+                            </div>
+                        </div>
+                        <!-- Toolchain Grid -->
+                        <div class="toolchain-grid">
+                            <div class="tool-chip">
+                                <div class="tool-chip-icon"><i class="fa-brands fa-git-alt"></i></div>
+                                <span>Git</span>
+                                <div class="tool-chip-pulse"></div>
+                            </div>
+                            <div class="tool-chip">
+                                <div class="tool-chip-icon"><i class="fa-brands fa-github"></i></div>
+                                <span>GitHub</span>
+                                <div class="tool-chip-pulse"></div>
+                            </div>
+                            <div class="tool-chip">
+                                <div class="tool-chip-icon"><i class="fa-brands fa-docker"></i></div>
+                                <span>Docker</span>
+                                <div class="tool-chip-pulse"></div>
+                            </div>
+                            <div class="tool-chip">
+                                <div class="tool-chip-icon"><i class="fa-solid fa-code"></i></div>
+                                <span>VS Code</span>
+                                <div class="tool-chip-pulse"></div>
+                            </div>
+                            <div class="tool-chip">
+                                <div class="tool-chip-icon"><i class="fa-solid fa-book-open"></i></div>
+                                <span>Jupyter</span>
+                                <div class="tool-chip-pulse"></div>
+                            </div>
+                            <div class="tool-chip">
+                                <div class="tool-chip-icon"><i class="fa-solid fa-cloud"></i></div>
+                                <span>Colab</span>
+                                <div class="tool-chip-pulse"></div>
+                            </div>
+                        </div>
+                        <!-- Circular Proficiency Meters -->
+                        <div class="proficiency-meters">
+                            <div class="meter-item">
+                                <div class="meter-ring">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="meter-bg" cx="50" cy="50" r="40"></circle>
+                                        <circle class="meter-fill meter-fill-amber" cx="50" cy="50" r="40" style="stroke-dashoffset: 50;"></circle>
+                                    </svg>
+                                    <div class="meter-value">80<span>%</span></div>
+                                </div>
+                                <span class="meter-label">Git Flow</span>
+                            </div>
+                            <div class="meter-item">
+                                <div class="meter-ring">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="meter-bg" cx="50" cy="50" r="40"></circle>
+                                        <circle class="meter-fill meter-fill-amber" cx="50" cy="50" r="40" style="stroke-dashoffset: 100;"></circle>
+                                    </svg>
+                                    <div class="meter-value">60<span>%</span></div>
+                                </div>
+                                <span class="meter-label">Containers</span>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -547,6 +748,80 @@ engineer.run_intelligence_pipeline()</code></pre>
                 </div>
 
                 <div class="projects-grid">
+                    <!-- Project: Into The Algorithm -->
+                    <div class="project-card glass-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="project-image-wrapper video-highlight-wrapper highlighted-video-wrapper algorithm-theme">
+                            <div class="video-glow-effect"></div>
+                            
+                            <div class="hud-monitor-viewport">
+                                <!-- Sci-Fi Corner Brackets -->
+                                <div class="hud-bracket tl"></div>
+                                <div class="hud-bracket tr"></div>
+                                <div class="hud-bracket bl"></div>
+                                <div class="hud-bracket br"></div>
+                                
+                                <!-- High-Tech Scanline & CRT Grid -->
+                                <div class="hud-matrix-grid"></div>
+                                
+                                <!-- Top Status HUD Bar -->
+                                <div class="hud-top-meta">
+                                    <div class="meta-left">
+                                        <span class="pulse-dot green-pulse"></span> LIVE_FEED // ML_VISUALIZER
+                                    </div>
+                                    <div class="meta-right">CANVAS_3D</div>
+                                </div>
+                                
+                                <video class="project-video-element" autoplay loop muted playsinline preload="auto">
+                                    <source src="assets/into-algorithm.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                
+                                <!-- Bottom Cyber Diagnostics Readout -->
+                                <div class="hud-bottom-readout">
+                                    <span>SYS: BROWSER_NATIVE</span>
+                                    <span>FPS: 60</span>
+                                    <span>ENGINE: CANVAS_3D</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-overlay" style="pointer-events: none;">
+                                <div class="project-tech-pills">
+                                    <span>React 18</span>
+                                    <span>Vite</span>
+                                    <span>HTML5 Canvas</span>
+                                    <span>Supabase</span>
+                                    <span>PostgreSQL</span>
+                                    <span>Framer Motion</span>
+                                    <span>GSAP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Into The Algorithm</h3>
+                            <p class="project-tagline">Browser-Native Interactive Machine Learning Visualization & Learning Platform</p>
+                            <p class="project-desc">
+                                Transforms ML models from black boxes into interactive visual experiences. Connects mathematical intuition, model behavior, and hands-on experimentation with 3D Logistic Hyperplanes, 3D Loss Landscapes, Neural Network Gradient Propagation, and Model Genome Exploration.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Architectural Features:</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-cube"></i> 3D Hyperplane & Loss Landscape Optimizer Simulator (SGD, Adam)</li>
+                                    <li><i class="fa-solid fa-network-wired"></i> Forward/Backward Neuron Inspector & Model Genome Lab</li>
+                                    <li><i class="fa-solid fa-gamepad"></i> 100+ Level ML Quest with Supabase Cloud & LocalSync</li>
+                                </ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/alhajbaig/Into-The-Algorithm" target="_blank" class="btn btn-secondary btn-sm btn-magnetic">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="https://into-the-algorithm.vercel.app/" target="_blank" class="btn btn-primary btn-sm btn-magnetic">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Project 1 -->
                      <div class="project-card glass-card" data-tilt>
                         <div class="card-glow"></div>
@@ -886,7 +1161,64 @@ engineer.run_intelligence_pipeline()</code></pre>
                 </div>
 
                 <div class="hologram-cabinet-grid">
-                    <!-- Achievement 1: VNIT -->
+                    <!-- Achievement 1: Smackathon 2026 @ YCCE -->
+                    <div class="achievement-holo-card glass-card smackathon-achievement-card" data-tilt>
+                        <div class="holo-scanlines"></div>
+                        <div class="card-glow purple-card-glow"></div>
+
+                        <!-- Top Badge Row -->
+                        <div class="tulsiram-badge-row">
+                            <div class="holo-status-tag unlocked smackathon-status-tag">
+                                <i class="fa-solid fa-medal"></i> 1ST RUNNER-UP
+                            </div>
+                            <div class="smackathon-stats-pills">
+                                <span class="stat-pill"><i class="fa-solid fa-users"></i> 350+ Teams Participated</span>
+                                <span class="stat-pill"><i class="fa-solid fa-filter"></i> 80 PPT Qualifiers</span>
+                                <span class="stat-pill"><i class="fa-solid fa-fire"></i> 25 Finalists</span>
+                                <span class="stat-pill prize-pill"><i class="fa-solid fa-indian-rupee-sign"></i> ₹10,000 Award</span>
+                            </div>
+                            <div class="holo-cert-hash">HASH // ycce-smackathon-2026</div>
+                        </div>
+
+                        <h3 class="smackathon-title">🥈 1st Runner-Up @ Smackathon 2026</h3>
+                        <div class="achievement-details-label">Yeshwantrao Chavan College of Engineering (YCCE) &middot; 24-Hour National Hackathon</div>
+                        <p class="smackathon-desc">Out of <strong>350+ registered teams</strong> and <strong>80 shortlisted PPT teams</strong>, advanced to the top 25 final stage and secured <strong>1st Runner-Up</strong> in a 24-hour national hackathon by presenting <em>Into The Algorithm</em> — an interactive ML visualizer that deeply impressed the judging panel.</p>
+
+                        <!-- 3 Equal Uncropped Photo Columns for Smackathon -->
+                        <div class="achievement-3gallery-grid">
+                            <!-- Panel 1: Award Ceremony Stage Cheque -->
+                            <div class="triptych-panel panel-photo panel-cheque">
+                                <div class="panel-label"><i class="fa-solid fa-award"></i> CHEQUE CEREMONY &middot; ₹10,000</div>
+                                <img src="assets/smackathon-cheque.jpg" alt="Smackathon 1st Runner-Up Cheque Presentation" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
+                            </div>
+
+                            <!-- Panel 2: Solo Certificate -->
+                            <div class="triptych-panel panel-photo panel-solo">
+                                <div class="panel-label"><i class="fa-solid fa-certificate"></i> RUNNER-UP CERTIFICATE</div>
+                                <img src="assets/smackathon-solo.jpg" alt="Smackathon Certificate Presentation" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
+                            </div>
+
+                            <!-- Panel 3: Grand Finalists Group Photo -->
+                            <div class="triptych-panel panel-photo panel-group">
+                                <div class="panel-label"><i class="fa-solid fa-users-viewfinder"></i> GRAND FINALISTS & WINNERS</div>
+                                <img src="assets/smackathon-group.jpg" alt="Smackathon Finalists Group Photo" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2: VNIT 24h Hackathon -->
                     <div class="achievement-holo-card glass-card vnit-achievement-card" data-tilt>
                         <div class="holo-scanlines"></div>
                         <div class="card-glow cyan-card-glow"></div>
@@ -894,19 +1226,24 @@ engineer.run_intelligence_pipeline()</code></pre>
                         <!-- Top Badge Row -->
                         <div class="tulsiram-badge-row">
                             <div class="holo-status-tag unlocked vnit-status-tag">
-                                <i class="fa-solid fa-medal"></i> RUNNER-UP
+                                <i class="fa-solid fa-medal"></i> 1ST RUNNER-UP
+                            </div>
+                            <div class="smackathon-stats-pills">
+                                <span class="stat-pill"><i class="fa-solid fa-users"></i> 400+ Teams Applied</span>
+                                <span class="stat-pill"><i class="fa-solid fa-filter"></i> Top 80 Offline Stage</span>
+                                <span class="stat-pill"><i class="fa-solid fa-clock"></i> 24h Hackathon</span>
                             </div>
                             <div class="holo-cert-hash">HASH // vnit-2025-runnerup</div>
                         </div>
 
-                        <h3 class="vnit-title">🥈 Runner-up @ VNIT</h3>
-                        <div class="achievement-details-label">VNIT Nagpur &middot; 24h Hackathon</div>
-                        <p class="vnit-desc">Secured top runner-up spot out of over 100 teams by designing an AI-driven automation project under a 24-hour time constraint.</p>
+                        <h3 class="vnit-title">🥈 1st Runner-Up @ VNIT Nagpur</h3>
+                        <div class="achievement-details-label">Visvesvaraya National Institute of Technology (VNIT) &middot; 24-Hour National Hackathon</div>
+                        <p class="vnit-desc">Competed against <strong>400+ applying teams</strong> nationwide. Qualified among the <strong>top 80 teams for the offline stage</strong> at VNIT Nagpur and secured <strong>1st Runner-Up</strong> by designing an automated AI workflow under strict 24-hour time constraints.</p>
 
                         <!-- Glimpse Photo Panel -->
                         <div class="vnit-media-panel">
                             <div class="triptych-panel panel-photo">
-                                <div class="panel-label"><i class="fa-solid fa-camera"></i> GLIMPSE AT HACKATHON</div>
+                                <div class="panel-label"><i class="fa-solid fa-camera"></i> HACKATHON GLIMPSE & PROJECT DEMO</div>
                                 <img src="assets/vnit-glimpse.jpg" alt="VNIT Hackathon Glimpse" class="triptych-img contain-img">
                                 <div class="panel-corner-bracket tl"></div>
                                 <div class="panel-corner-bracket tr"></div>
@@ -916,7 +1253,7 @@ engineer.run_intelligence_pipeline()</code></pre>
                         </div>
                     </div>
 
-                    <!-- Achievement 2: Tulsiram Gaikwad — Cinematic Media Card -->
+                    <!-- Achievement 3: Tulsiram Gaikwad Champion -->
                     <div class="achievement-holo-card glass-card tulsiram-achievement-card" data-tilt>
                         <div class="holo-scanlines"></div>
                         <div class="card-glow gold-card-glow"></div>
@@ -924,20 +1261,24 @@ engineer.run_intelligence_pipeline()</code></pre>
                         <!-- Top Badge Row -->
                         <div class="tulsiram-badge-row">
                             <div class="holo-status-tag unlocked">
-                                <i class="fa-solid fa-trophy"></i> CHAMPION
+                                <i class="fa-solid fa-trophy"></i> CHAMPIONSHIP WINNER
+                            </div>
+                            <div class="smackathon-stats-pills">
+                                <span class="stat-pill"><i class="fa-solid fa-users"></i> 60+ Teams Participated</span>
+                                <span class="stat-pill prize-pill"><i class="fa-solid fa-trophy"></i> 1st Place Champion</span>
                             </div>
                             <div class="holo-cert-hash">HASH // tgce-2024-winner</div>
                         </div>
 
-                        <h3 class="tulsiram-title">🏆 Championship Winner</h3>
-                        <div class="achievement-details-label">Tulsiram Gaikwad Patil College &middot; Hackathon</div>
-                        <p class="tulsiram-desc">Won the championship award by presenting an innovative intelligent software system demonstrating outstanding utility and UI execution.</p>
+                        <h3 class="tulsiram-title">🏆 Championship Winner @ TGCE</h3>
+                        <div class="achievement-details-label">Tulsiram Gaikwad Patil College of Engineering &middot; Regional Hackathon</div>
+                        <p class="tulsiram-desc">Secured <strong>1st Place Championship Winner</strong> out of <strong>60+ competing teams</strong> by designing an innovative computer vision and edge intelligence software solution with outstanding real-time utility and UI execution.</p>
 
-                        <!-- Creative 3-Panel Media Triptych -->
-                        <div class="tulsiram-media-triptych">
+                        <!-- 3 Equal Uncropped Photo Columns for TGCE -->
+                        <div class="achievement-3gallery-grid">
                             <!-- Panel 1: Award Ceremony Stage -->
                             <div class="triptych-panel panel-photo">
-                                <div class="panel-label"><i class="fa-solid fa-award"></i> CEREMONY STAGE</div>
+                                <div class="panel-label"><i class="fa-solid fa-award"></i> STAGE AWARD CEREMONY</div>
                                 <img src="assets/award-ceremony.jpg" alt="Award Ceremony Stage" class="triptych-img contain-img">
                                 <div class="panel-corner-bracket tl"></div>
                                 <div class="panel-corner-bracket tr"></div>
@@ -945,20 +1286,24 @@ engineer.run_intelligence_pipeline()</code></pre>
                                 <div class="panel-corner-bracket br"></div>
                             </div>
 
-                            <!-- Panels 2+3: Photo Stack -->
-                            <div class="triptych-photos">
-                                <div class="triptych-panel panel-photo">
-                                    <div class="panel-label"><i class="fa-solid fa-trophy"></i> WINNER</div>
-                                    <img src="assets/award-solo.jpg" alt="Championship Trophy & Certificate" class="triptych-img focus-top">
-                                    <div class="panel-corner-bracket tl"></div>
-                                    <div class="panel-corner-bracket br"></div>
-                                </div>
-                                <div class="triptych-panel panel-photo">
-                                    <div class="panel-label"><i class="fa-solid fa-users"></i> TEAM VICTORY</div>
-                                    <img src="assets/award-group.jpg" alt="Award Ceremony Group" class="triptych-img focus-top">
-                                    <div class="panel-corner-bracket tl"></div>
-                                    <div class="panel-corner-bracket br"></div>
-                                </div>
+                            <!-- Panel 2: Winner Solo Trophy -->
+                            <div class="triptych-panel panel-photo">
+                                <div class="panel-label"><i class="fa-solid fa-trophy"></i> WINNER TROPHY & CERTIFICATE</div>
+                                <img src="assets/award-solo.jpg" alt="Championship Trophy & Certificate" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
+                            </div>
+
+                            <!-- Panel 3: Team Victory -->
+                            <div class="triptych-panel panel-photo">
+                                <div class="panel-label"><i class="fa-solid fa-users"></i> TEAM VICTORY</div>
+                                <img src="assets/award-group.jpg" alt="Award Ceremony Group" class="triptych-img contain-img">
+                                <div class="panel-corner-bracket tl"></div>
+                                <div class="panel-corner-bracket tr"></div>
+                                <div class="panel-corner-bracket bl"></div>
+                                <div class="panel-corner-bracket br"></div>
                             </div>
                         </div>
                     </div>
@@ -1452,7 +1797,20 @@ engineer.run_intelligence_pipeline()</code></pre>
         })();
     </script>
 
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    
+    <!-- Three.js 3D Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <!-- Custom JS -->
-    <script src="app.js"></script>
+    <script src="app.js?v=5.0"></script>
 </body>
 </html>

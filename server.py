@@ -1,39 +1,32 @@
 import os
 import re
 import sys
-import shutil
 import mimetypes
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 class RangeRequestHandler(SimpleHTTPRequestHandler):
     def send_head(self):
         """Common code for GET and HEAD commands to handle Range requests."""
-        # Strip query string before resolving file path
         if '?' in self.path:
             self.path = self.path.split('?')[0]
         path = self.translate_path(self.path)
         
-        # If the path is a directory, let the base class handle it
         if os.path.isdir(path):
             return super().send_head()
             
-        # Parse the Range header if present
         range_header = self.headers.get('Range')
         if not range_header or not range_header.startswith('bytes='):
             return super().send_head()
             
-        # Try to open the file
         try:
             f = open(path, 'rb')
         except OSError:
             self.send_error(404, "File not found")
             return None
             
-        # Get file size
         fs = os.fstat(f.fileno())
         file_size = fs.st_size
         
-        # Parse range values
         range_match = re.match(r'bytes=(\d*)-(\d*)', range_header)
         if not range_match:
             self.send_error(400, "Bad Request")
@@ -50,7 +43,6 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
             f.close()
             return None
             
-        # Send 206 Partial Content response
         self.send_response(206)
         self.send_header('Content-Type', self.guess_type(path))
         self.send_header('Content-Range', f'bytes {start}-{end}/{file_size}')
@@ -58,7 +50,6 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
         self.send_header('Accept-Ranges', 'bytes')
         self.end_headers()
         
-        # Seek to start and prepare to return
         f.seek(start)
         self.range_start = start
         self.range_end = end
@@ -70,7 +61,6 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
             super().copyfile(source, outputfile)
             return
             
-        # Write only the requested range of bytes
         bytes_to_read = self.range_end - self.range_start + 1
         buffer_size = 64 * 1024
         while bytes_to_read > 0:
@@ -92,7 +82,6 @@ if __name__ == '__main__':
     
     server_address = (bind_ip, port)
     mimetypes.init()
-    # Add mapping for mp4 if missing
     if '.mp4' not in mimetypes.types_map:
         mimetypes.add_type('video/mp4', '.mp4')
         
